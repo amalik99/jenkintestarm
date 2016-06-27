@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "components_sbuild_name": {
-            "value": amitspringbuild
+            "value": "amitspringbuild"
         },
         "sites_sbuild_name": {
-            "value": amitspringbuild
+            "value": "amitspringbuild"
         },
         "sites_sbuild_serverFarmId": {
             "value": null
