@@ -1,0 +1,72 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "components_sbuild_name": {
+            "defaultValue": "sbuild",
+            "type": "String"
+        },
+        "sites_sbuild_name": {
+            "defaultValue": "sbuild",
+            "type": "String"
+        },
+        "sites_sbuild_serverFarmId": {
+            "defaultValue": "/subscriptions/85b57ccd-ac52-45a6-b75e-6cd85cac7d47/resourceGroups/Lab2/providers/Microsoft.Web/serverfarms/ServicePlanf19b3e51-94ee",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/85b57ccd-ac52-45a6-b75e-6cd85cac7d47/resourceGroups/LabRG-Jenkinsbuild/providers/microsoft.insights/components/sbuild'.",
+            "type": "microsoft.insights/components",
+            "kind": "web",
+            "name": "[parameters('components_sbuild_name')]",
+            "apiVersion": "2014-04-01",
+            "location": "Central US",
+            "tags": {
+                "hidden-link:/subscriptions/85b57ccd-ac52-45a6-b75e-6cd85cac7d47/resourceGroups/LabRG-Jenkinsbuild/providers/Microsoft.Web/sites/sbuild": "Resource"
+            },
+            "properties": {
+                "ApplicationId": "[parameters('components_sbuild_name')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/85b57ccd-ac52-45a6-b75e-6cd85cac7d47/resourceGroups/LabRG-Jenkinsbuild/providers/Microsoft.Web/sites/sbuild'.",
+            "type": "Microsoft.Web/sites",
+            "name": "[parameters('sites_sbuild_name')]",
+            "apiVersion": "2015-08-01",
+            "location": "South Central US",
+            "tags": {
+                "hidden-related:/subscriptions/85b57ccd-ac52-45a6-b75e-6cd85cac7d47/resourcegroups/Lab2/providers/Microsoft.Web/serverfarms/ServicePlanf19b3e51-94ee": "empty"
+            },
+            "properties": {
+                "name": "[parameters('sites_sbuild_name')]",
+                "hostNames": [
+                    "amitsbuild.azurewebsites.net"
+                ],
+                "enabledHostNames": [
+                    "amitsbuild.azurewebsites.net",
+                    "amitsbuild.scm.azurewebsites.net"
+                ],
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_sbuild_name'),'.azurewebsites.net')]",
+                        "sslState": 0,
+                        "thumbprint": null,
+                        "ipBasedSslState": 0
+                    },
+                    {
+                        "name": "[concat(parameters('sites_sbuild_name'),'.scm.azurewebsites.net')]",
+                        "sslState": 0,
+                        "thumbprint": null,
+                        "ipBasedSslState": 0
+                    }
+                ],
+                "serverFarmId": "[parameters('sites_sbuild_serverFarmId')]"
+            },
+            "dependsOn": []
+        }
+    ]
+}
