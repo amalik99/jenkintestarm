@@ -5,7 +5,7 @@
     
   },
   "variables": {
-    "webSiteName": "[concat('webSite', uniqueString(resourceGroup().id))]",
+    "webSiteName": "websiteamit16",
     "hostingPlanName": "[concat('hstplan', uniqueString(resourceGroup().id))]",
     "skuCapacity": "1",
     "skuName": "F1"
@@ -43,9 +43,7 @@
         "name": "[variables('webSiteName')]",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
 	"siteConfig": {
-	"netFrameworkVersion": "v4.0",
-    	"phpVersion": "5.4",
-    	"pythonVersion": "",
+	 "pythonVersion": "",
     	"requestTracingEnabled": false,
     	"remoteDebuggingEnabled": false,
     	"remoteDebuggingVersion": "VS2012",
