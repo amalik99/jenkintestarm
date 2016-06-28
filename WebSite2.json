@@ -52,7 +52,7 @@
     	"httpLoggingEnabled": false,
     	"logsDirectorySizeLimit": 35,
     	"detailedErrorLoggingEnabled": false,
-    	"publishingUsername": "$jenkinazureadmin",
+    	"publishingUsername": "jenkinazureadmin",
     	"publishingPassword": "microsoft@123",
     	"appSettings": null,
     	"metadata": null,
