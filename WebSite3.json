@@ -85,7 +85,7 @@
             "displayName": "DeployApp"
           },
           "properties": {
-            "packageUri": "[concat(variables('_artifactsLocation'), '/', variables('DeployAppPackageFolder'), '/', variables('DeployAppPackageFileName'))]",
+            "packageUri": "https://storageaccountspektra.blob.core.windows.net/templates/myarchive.zip",
             "dbType": "None",
             "connectionString": null,
             "setParameters": {
