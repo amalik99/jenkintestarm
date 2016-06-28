@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
@@ -42,6 +42,7 @@
       "properties": {
         "name": "[variables('webSiteName')]",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
+	siteConfig": {
 	"netFrameworkVersion": "v4.0",
     	"phpVersion": "5.4",
     	"pythonVersion": "",
@@ -67,7 +68,8 @@
     	"javaContainer": "TOMCAT",
     	"javaContainerVersion": "7.0",
     	"managedPipelineMode": 0
-      }
+      		}
+	}
     },
     {
       "apiVersion": "2014-04-01",
