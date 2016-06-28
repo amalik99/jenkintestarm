@@ -50,7 +50,7 @@
     	"logsDirectorySizeLimit": 35,
     	"detailedErrorLoggingEnabled": false,
     	"publishingUsername": "$jenkinadmin",
-    	"publishingPassword": microsoft@123,
+    	"publishingPassword": "microsoft@123",
     	"appSettings": null,
     	"metadata": null,
     	"connectionStrings": null,
