@@ -9,9 +9,9 @@
     "hostingPlanName": "[concat('hstplan', uniqueString(resourceGroup().id))]",
     "skuCapacity": "1",
     "skuName": "F1",
-    "_artifactsLocation": "https://storageaccountspektra.blob.core.windows.net/templates/myarchive.zip",
+    "_artifactsLocation": "https://storageaccountspektra.blob.core.windows.net/templates/jenkiappdeploy.zip",
     "DeployAppPackageFolder": "templates",
-    "DeployAppPackageFileName": "myarchive.zip"
+    "DeployAppPackageFileName": "jenkinappdeploy.zip"
 
   },
   "resources": [
